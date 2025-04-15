@@ -26,8 +26,8 @@ create table appointment (
     doctor_id int,
     appointment_date date not null,
     description text,
-    constraint fk_patient_id foreign key (patient_id) references patient(patient_id) on delete cascade,
-    constraint fk_doctor_id foreign key (doctor_id) references doctor(doctor_id) on delete cascade
+    constraint fk_patient_id foreign key (patient_id) references patient(patient_id),
+    constraint fk_doctor_id foreign key (doctor_id) references doctor(doctor_id)
 );
 
 INSERT INTO Doctor (first_name, last_name, specialization, contact_number) VALUES
